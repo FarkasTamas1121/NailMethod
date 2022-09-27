@@ -1,0 +1,280 @@
+:root {
+  --primary-color: rgb(78, 139, 231);
+  /* --primary-color:rgba(127, 255, 212, 0.699); */
+  --bg-color: white;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  margin: 0 auto;
+  background-color: var(--bg-color);
+}
+h1,
+h2,
+h3 {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+p {
+  margin: 0.5rem 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+img {
+  width: 100%;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: var(--primary-color);
+  color: black;
+  border-radius: 3rem;
+  margin: 0.5rem 0;
+  cursor: pointer;
+  font-weight: bold;
+}
+.btn:hover {
+  border: 2px solid black;
+}
+
+/* navigáció */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: var(--primary-color);
+  padding: 1rem;
+  height: 70px;
+  z-index: 5;
+  border-bottom: #333 2px solid;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav ul a {
+  padding: 0.5rem;
+}
+nav ul a:hover {
+  border-bottom: #333 1px solid;
+  font-weight: bold;
+}
+/* home */
+#home {
+  margin: 1rem 0;
+}
+#home header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home-content,
+.home-img {
+  flex: 1;
+}
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+#work {
+  display: flex;
+  flex-direction: column;
+}
+.work-one {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+}
+.work-content {
+  flex: 2;
+}
+.work-img {
+  flex: 1;
+}
+.work-two {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  text-align: center;
+  margin: 1rem 0;
+}
+.work-two div {
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: black;
+  overflow: hidden;
+}
+.work-two div h3,
+.work-two div p {
+  margin: 1rem 0;
+}
+.work-two a:hover {
+  border: 1px solid black;
+  /* box-shadow: 0 0 10px gray; */
+}
+#about-us {
+  margin: 1rem 0;
+}
+.about-us-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+  justify-items: center;
+}
+.about-us-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 250px;
+  background-color: var(--primary-color);
+  padding: 1rem;
+  border-radius: 12px;
+}
+.about-us-item img {
+  width: 100px;
+  border-radius: 50%;
+}
+.about-us-item-content .icon {
+  width: 25px;
+  border-radius: 0;
+  margin-right: 0.2rem;
+}
+.about-us-item-content .email,
+.about-us-item-content .tel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+}
+footer {
+  background-color: var(--primary-color);
+  padding: 1rem;
+}
+footer ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer i {
+  margin-right: 1rem;
+}
+/* ----------Index-2---------------------- */
+#board-game {
+  padding-top: 8.5rem;
+}
+#kvalifikaciosmező {
+  padding-top: 8.5rem;
+}
+#jatekmezo {
+  padding-top: 8rem;
+}
+#board-game h3 {
+  margin: 1rem 0;
+}
+#board-game p {
+  margin: 1rem 0;
+}
+#board-game img {
+  max-width: 900px;
+}
+.board-game-content-1 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+.board-game-content-2 {
+  display: flex;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+.grid3 {
+  order: 2;
+}
+.grid1 {
+  padding: 1rem;
+}
+.grid2 {
+  order: 3;
+  padding: 1rem;
+}
+.nav-board {
+  position: sticky;
+  top: 100px;
+  left: 0;
+}
+.nav-board ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+/* .nav-board ul li {
+  padding: 1rem 2rem;
+} */
+.nav-board ul li a {
+  padding: 1rem 2rem;
+  background-color: var(--primary-color);
+  border-radius: 60px;
+}
+.nav-board ul li a:hover {
+  border: 2px solid black;
+}
+@media (max-width: 768px) {
+  #home,
+  #work,
+  .work-one,
+  .work-two #about-us {
+    margin: 1rem 0;
+  }
+  .home-img {
+    display: none;
+  }
+  .home-content {
+    align-items: center;
+    text-align: center;
+  }
+  .work-one {
+    text-align: center;
+  }
+  .work-img {
+    display: none;
+  }
+  .work-two {
+    grid-template-columns: 1fr;
+  }
+  .about-us-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-us-item {
+    max-width: 375px;
+  }
+  nav a {
+    font-size: 0.8rem;
+  }
+  nav h1 {
+    font-size: 1.5rem;
+  }
+}
